@@ -1,8 +1,10 @@
 web:
   build: .
-  entrypoint: /bin/sh
-  stdin_open: true
-  tty: true
+  command: python app.py
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/descontuai
   links:
     - db
 db:
