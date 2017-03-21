@@ -1,5 +1,4 @@
 function callPaymentProcess () {
-	console.log('teste');
 	//PAY ATTENTION
 	//ESSE METODO ESTÁ APONTANDO PARA PRODUÇÃO
 
