@@ -49,7 +49,7 @@ class Contact(Resource):
             '[Descontuai] Dúvida de {}'.format(data.name),
             sender='doscontuai@gmail.com',
             recipients=
-            ['doscontuai@gmail.com'])
+            ['Nzocrato@gmail.com', 'doscontuai@gmail.com'])
 
         msg.html = render_template('contact_mail_template.html', contact=data)
 
