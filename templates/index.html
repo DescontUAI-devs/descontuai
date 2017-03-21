@@ -156,6 +156,8 @@
 
      <section id="invite" class="pad-lg light-gray-bg">
 		<div class="container">
+
+
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<i class="fa fa-envelope-o margin-40"></i>
@@ -164,7 +166,13 @@
                     <p class="black">Ficou com alguma dúvida? Deixe seu nome, telefone ou e-mail e a descrição de sua dúvida. <u>Em até 24 horas iremos te responder</u>!</p>
 					<br />
 
-                    <form role="form">
+                    <div class="row">
+                        <div class="col-sm-12 text-left" id="alert_placeholder">
+
+                        </div>
+                    </div>
+
+                    <form role="form" id="contact-form">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
@@ -179,13 +187,13 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
 								<div class="form-group">
-                                    <textarea id="description" class="form-control" placeholder="Descrição"></textarea>
+                                    <textarea id="description" class="form-control" placeholder="Descrição" required></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-								<button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+								<button type="submit" id="btnEnviar" class="btn btn-primary btn-lg btn-block">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -218,11 +226,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../static/js/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="../static/js/wow.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/validator.min.js"></script>
+    <script src="../static/js/jquery.mask.min.js"></script>
     <script src="../static/js/main.js"></script>
     <script src="../static/js/app.js"></script>
 </body>
