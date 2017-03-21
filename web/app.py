@@ -1,5 +1,6 @@
 # Configuring App
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -14,8 +15,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # Todo: Render index template
-    return 'Yay! Tá no ar!'
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
