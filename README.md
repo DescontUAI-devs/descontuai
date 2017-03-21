@@ -36,6 +36,10 @@ docker-compose up
 * [Leonardo Flores](https://github.com/leonardocouy)
 * [Carol Faria](https://github.com/kahfaria)
 
+## Super Designer
+
+* [Ana Araujo](https://github.com/anasalmao)
+
 ![DescontUAI dev's](https://media.giphy.com/media/t6f2bNAjx7Bio/giphy.gif)
 
 
