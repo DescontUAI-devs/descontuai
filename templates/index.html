@@ -20,6 +20,7 @@
 
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../static/css/main.css">
+	<link rel="stylesheet" href="../static/css/custom.css">
 
 	<!-- <script src="https://use.fontawesome.com/48687bf78c.js"></script> -->
 	<script src="../static/js/modernizr-2.7.1.js"></script>
@@ -153,36 +154,45 @@
 		</div>
     </section>
 
-<!--     <section id="invite" class="pad-lg light-gray-bg">
+     <section id="invite" class="pad-lg light-gray-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<i class="fa fa-envelope-o margin-40"></i>
 					<h2 class="black">Contato</h2>
 					<br />
-					<p class="black">Ficou com alguma dúvida? Deixe seu nome, telefone ou e-mail que entramos em contato com você.</p>
+                    <p class="black">Ficou com alguma dúvida? Deixe seu nome, telefone ou e-mail e a descrição de sua dúvida. <u>Em até 24 horas iremos te responder</u>!</p>
 					<br />
 
-					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-							<form role="form">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="phone" placeholder="Telefone">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
 								<div class="form-group">
-									<input type="name" class="form-control" id="exampleInputname" placeholder="Nome">
-								</div>
-								<div class="form-group">
-									<input type="telefone" class="form-control" id="exampleInputtelefone1" placeholder="Telefone">
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-								</div>
-								<button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-							</form>
-						</div>
-					</div>
+                                    <textarea id="description" class="form-control" placeholder="Descrição"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>
-    </section> -->
+    </section>
 
     <footer>
 		<div class="container">
