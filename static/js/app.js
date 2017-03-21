@@ -2,19 +2,12 @@ function callPaymentProcess () {
 	//PAY ATTENTION
 	//ESSE METODO ESTÁ APONTANDO PARA PRODUÇÃO
 
-	//trocar esse código pelo codigo do produto no pagseguro
-	var codigo = '1F69A3CF7878ED9994B3DF9DDC706796';
-	var isOpenLightbox = PagSeguroLightbox({
-	    code: codigo
-	}, {
+	var isOpenLightbox = PagSeguroLightbox('8616A9BAD9D9F4B2246E1FB787166E8F', {
 	    success : function(transactionCode) {
 	    	//continuou
 	        alert("success - " + transactionCode);
 	    },
-	    abort : function() {
-	    	//cancelou
-	        alert("abort");
-	    }
+	    abort : function() {}
 	});
 
 	// Redirecionando o cliente caso o navegador não tenha suporte ao Lightbox
