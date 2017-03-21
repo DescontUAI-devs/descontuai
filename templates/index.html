@@ -19,7 +19,7 @@
 
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../static/css/main.css">
-	
+
 	<!-- <script src="https://use.fontawesome.com/48687bf78c.js"></script> -->
 	<script src="../static/js/modernizr-2.7.1.js"></script>
 </head>
@@ -67,9 +67,9 @@
 								<div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
 									<a href="#be-the-first" class="btn btn-secondary btn-lg scroll">Saiba mais</a>
 								</div>
-								<div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
+								<!-- <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
 									<a href="#invite" class="btn btn-primary btn-lg scroll">Contato</a>
-								</div>
+								</div> -->
 							</div><!--End Button Row-->  
 						</div>
 					</div>
@@ -138,11 +138,11 @@
 					<ul class="list-unstyled pricing-table text-center">
 						<li class="headline"><h5 class="white">PROMOÇÃO</h5></li>
 						<li class="price"><div class="amount">R$ 249</div></li>
-						<li class="info">Renove agora sua casa ou loja. Abaixo, informações e detalhes sobre o pacote: </li>
+						<li class="info">Renove agora sua casa ou loja.<br/>Informações e detalhes sobre o pacote:</li>
 						<li class="features first">1 cômodo</li>
 						<li class="features">2 horas de consultoria</li>
 						<li class="features">Projeto enviado em 15 dias</li>
-						<li class="features last btn btn-secondary btn-wide"><a href="#">EU QUERO!</a></li>
+						<li class="features last btn btn-secondary btn-wide"><button class="btn btn-link" onclick="callPaymentProcess()">EU QUERO!</button></li>
 					</ul>
 				</div>
 
@@ -151,9 +151,8 @@
 			</div>
 		</div>
     </section>
-    
-    
-    <section id="invite" class="pad-lg light-gray-bg">
+
+<!--     <section id="invite" class="pad-lg light-gray-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
@@ -178,11 +177,12 @@
 								<button type="submit" class="btn btn-primary btn-lg">Enviar</button>
 							</form>
 						</div>
-					</div><!--End Form row-->
+					</div>
 				</div>
 			</div>
 		</div>
-    </section>
+    </section> -->
+
     <footer>
 		<div class="container">
 			<div class="row">
@@ -203,14 +203,16 @@
 		</div>
     </footer>
     
-    
     <!-- Javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../static/js/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="../static/js/wow.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/main.js"></script>
+    <script src="../static/js/app.js"></script>
 </body>
 </html>
