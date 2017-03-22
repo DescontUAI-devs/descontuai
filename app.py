@@ -62,9 +62,15 @@ class Contact(Resource):
 api.add_resource(Customer, '/api/v1/customer')
 api.add_resource(Contact, '/api/v1/contact')
 
+
 @app.route("/")
 def index():
     return render_template('index.html')
+
+
+@app.route("/thanks")
+def thanks():
+    return render_template('thankyou.html')
 
 
 if __name__ == "__main__":
