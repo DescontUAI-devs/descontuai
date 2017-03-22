@@ -4,3 +4,12 @@ textarea.form-control {
     height: 210px;
     max-height: 210px;
 }
+
+.line-through{
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+.erased{
+	color: rgba(128, 128, 128, 0.49);
+}

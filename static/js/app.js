@@ -2,10 +2,12 @@ function callPaymentProcess () {
 	//PAY ATTENTION
 	//ESSE METODO ESTÁ APONTANDO PARA PRODUÇÃO
 
-	var isOpenLightbox = PagSeguroLightbox('8616A9BAD9D9F4B2246E1FB787166E8F', {
+	var code = '8616A9BAD9D9F4B2246E1FB787166E8F';
+
+	var isOpenLightbox = PagSeguroLightbox(code, {
 	    success : function(transactionCode) {
 	    	//continuou
-	        alert("success - " + transactionCode);
+	        // alert("success - " + transactionCode);
 	    },
 	    abort : function() {}
 	});
