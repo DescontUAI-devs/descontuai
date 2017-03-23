@@ -168,7 +168,24 @@ a:hover, a:focus {
   transition: all 0.35s ease-in-out;
 }
 
+.btn-capture {
+  background-color:#fff227;
+  color: #f00f0f;
+  font-size: 25px; 
+  line-height: 1.33;
+  padding: 10px 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
+.btn-capture:hover, .btn-capture:focus, .btn-capture:active, .btn-capture.active {
+  background-color: #fff227;
+  color: #f00f0f;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
 
 
 /*-----------------Margins------------------*/
