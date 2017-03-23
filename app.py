@@ -4,7 +4,7 @@ from flask import Flask
 from flask import Response
 from flask import render_template
 from flask_mail import Mail, Message
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, Api, reqparse, inputs
 from decouple import config
 app = Flask(__name__)
 api = Api(app)
@@ -44,20 +44,28 @@ class Contact(Resource):
         parser.add_argument('name', type=str, required=True, location='json')
         parser.add_argument('email', type=str, required=True, location='json')
         parser.add_argument('phone', type=str, location='json')
-        parser.add_argument('description', type=str, required=True, location='json')
+        parser.add_argument('description', type=str, location='json')
+        parser.add_argument('capture', default=False, type=inputs.boolean)
 
         data = parser.parse_args(strict=True)
         data['enviado_em'] = datetime.now()
 
+        if data.capture is True:
+            title = '[Descontuai] Interesse de {}'.format(data.name)
+            template = 'register_mail_template.html'
+        else:
+            title = '[Descontuai] Dúvida de {}'.format(data.name)
+            template = 'contact_mail_template.html'
+
         # Email Message
 
         msg = Message(
-            '[Descontuai] Dúvida de {}'.format(data.name),
+            title,
             sender='doscontuai@gmail.com',
             recipients=
             ['Nzocrato@gmail.com', 'doscontuai@gmail.com'])
 
-        msg.html = render_template('contact_mail_template.html', contact=data)
+        msg.html = render_template(template, contact=data)
 
         mail.send(msg)
 
@@ -78,6 +86,10 @@ def index():
 def thanks():
     return render_template('thankyou.html')
 
+
+@app.route("/cadastro")
+def capture():
+    return render_template('capture.html')
 
 @app.route('/.well-known/acme-challenge/<challenge>')
 def letsencrypt(challenge):

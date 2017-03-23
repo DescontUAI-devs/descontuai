@@ -49,7 +49,7 @@ $('#phone').mask(SPMaskBehavior, spOptions);
 // Form validation and Contact POST
 
 $('#contact-form').validator().on('submit', function (e) {
-
+	$body = $("body");
 	if (e.isDefaultPrevented()) {
 	} else {
 		e.preventDefault();
@@ -66,7 +66,7 @@ $('#contact-form').validator().on('submit', function (e) {
 			description: description
 		};
 
-
+		$body.addClass("loading");
 		$.ajax({
 			url: '/api/v1/contact',
 			data: JSON.stringify(data),
@@ -74,11 +74,53 @@ $('#contact-form').validator().on('submit', function (e) {
 			contentType: 'application/json',
 			success: function(response){
 				$("#contact-form")[0].reset();
-				showAlert('Sua dúvida foi enviada! Em breve entraremos em contato!!', 'alert-success')
+				showAlert('Sua dúvida foi enviada! Em breve entraremos em contato!!', 'alert-success');
+				$body.removeClass("loading");
 			},
 			error: function(error){
-				showAlert('Ops, ocorreu algum erro, verifique se preencheu todos os campos corretamente.', 'alert-warning')
+				showAlert('Ops, ocorreu algum erro, verifique se preencheu todos os campos corretamente.', 'alert-warning');
+				$body.removeClass("loading");
 			}
 		});
    }
 });
+
+
+// Form validation and RegisterPOST
+
+$('#register-form').validator().on('submit', function (e) {
+	$body = $("body");
+	if (e.isDefaultPrevented()) {
+	} else {
+		e.preventDefault();
+
+		var email = $('#email').val();
+		var name = $('#name').val();
+		var phone = $('#phone').val();
+
+		var data = {
+			email: email,
+			name: name,
+			phone: phone,
+			capture: 'True'
+		};
+
+		$body.addClass("loading");
+		$.ajax({
+			url: '/api/v1/contact',
+			data: JSON.stringify(data),
+			type: 'POST',
+			contentType: 'application/json',
+			success: function(response){
+				$("#register-form")[0].reset();
+				showAlert('Em breve entraremos em contato!!', 'alert-success')
+				$body.removeClass("loading");
+			},
+			error: function(error){
+				showAlert('Ops, ocorreu algum erro, verifique se preencheu todos os campos corretamente.', 'alert-warning')
+				$body.removeClass("loading");
+			}
+		});
+   }
+});
+

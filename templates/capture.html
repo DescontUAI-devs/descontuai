@@ -28,54 +28,42 @@
 	<!-- <script src="https://use.fontawesome.com/48687bf78c.js"></script> -->
 	<script src="../static/js/modernizr-2.7.1.js"></script>
 </head>
-<body>      
+<body>
+    <div class="modal"></div>
     <header>
 			<div class="container">
 					<div class="col-sm-8 col-sm-offset-2 text-center">
 						<h1>Saiba mais</h1>
 						<br />
-	                    <p class="lead">Ficou com alguma dúvida? <br/>Deixe nome, telefone e e-mail.<br/>Entraremos em contato com você!</p>
-						<br />
-	                    <form role="form" id="contact-form">
+	                    <p class="lead">Ficou com alguma dúvida? Deixe nome, telefone e e-mail.<br/>Entraremos em contato com você!</p>
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2 col-md-8 text-left" id="alert_placeholder">
+
+							</div>
+                    	</div>
+	                    <form role="form" id="register-form">
 	                        <div class="row">
-	                            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+	                            <div class="col-sm-8 col-sm-offset-2 col-md-8">
 	                                <div class="form-group">
 	                                    <input type="text" class="form-control" id="name" placeholder="Nome" required>
 	                                </div>
 	                                <div class="form-group">
-	                                    <input type="text" class="form-control" id="phone" placeholder="Telefone">
+	                                    <input type="text" class="form-control" id="phone" placeholder="Telefone" required>
 	                                </div>
 	                                <div class="form-group">
 	                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
 	                                </div>
-	                                <div class="col-sm-12">
-										<button type="submit" id="btnEnviar" class="btn btn-primary btn-lg btn-block">Enviar</button>
-	                            	</div>
 	                            </div>
 	                        </div>
+							<div class="row">
+							    <div class="col-sm-8 col-sm-offset-2"  >
+									<button type="submit" id="btnEnviar" class="btn btn-primary btn-lg btn-block">Enviar</button>
+								</div>
+							</div>
 	                    </form>
 					</div>
 			</div> 	
-	</header>   
-    <footer>
-        <div class="container">
-			<div class="row">
-				<div class="col-sm-8 margin-20">
-					<ul class="list-inline social">
-						<li>Redes Sociais: </li>
-						<!--li><a href="#"><i class="fa fa-twitter"></i></a></li-->
-						<li><a href="https://www.facebook.com/DescontUai/"  target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<!--li><a href="#"><i class="fa fa-instagram"></i></a></li-->
-					</ul>
-				</div>
-
-				<div class="col-sm-4 text-right">
-					<p><small>Copyright &copy; 2017. All rights reserved. <br>
-					Created by <a href="http://visualsoldiers.com">Visual Soldiers</a></small></p>
-				</div>
-			</div>
-		</div>
-    </footer>
+	</header>
     
     <!-- Javascript
     ================================================== -->
