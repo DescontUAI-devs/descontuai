@@ -1,6 +1,7 @@
 # Configuring App
 from datetime import datetime
 from flask import Flask
+from flask import Response
 from flask import render_template
 from flask_mail import Mail, Message
 from flask_restful import Resource, Api, reqparse
@@ -8,6 +9,11 @@ from decouple import config
 app = Flask(__name__)
 api = Api(app)
 
+# SSL CONFIGURATION
+
+credentials = {
+    config('SSL_KEY_CHALLENGE') : config('SSL_KEY_RESPONSE')
+}
 # EMAIL CONFIGURATION
 
 app.config['MAIL_SERVER'] = config('MAIL_SERVER')
@@ -72,6 +78,12 @@ def index():
 def thanks():
     return render_template('thankyou.html')
 
+
+@app.route('/.well-known/acme-challenge/<challenge>')
+def letsencrypt(challenge):
+    print(credentials)
+    print(challenge)
+    return Response(credentials[challenge], mimetype='text/plain')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
