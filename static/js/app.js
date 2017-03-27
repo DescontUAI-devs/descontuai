@@ -2,7 +2,7 @@ function callPaymentProcess () {
 	//PAY ATTENTION
 	//ESSE METODO ESTÁ APONTANDO PARA PRODUÇÃO
 
-	var code = '8616A9BAD9D9F4B2246E1FB787166E8F';
+	var code = '';
 
 	var isOpenLightbox = PagSeguroLightbox(code, {
 	    success : function(transactionCode) {
